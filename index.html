@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        
+// write the code to print the below patterns
+
+// 1.4
+// 6 8
+// 9 10 12
+// 14 15 16 18
+
+
+
+//     2.  a
+//      a b
+//     a   c
+//    a     d
+//     a   c
+//      a b
+//       a
+
+let rows=4
+for(i=1;i<2*rows-1;i++){
+    s=""
+    Code=97
+    space=(i<=rows)?rows-i:i-rows
+    cols=(i<=rows)?i:(2*rows)-i
+    for(sp=1;sp<=space;sp++){
+        s=s+" "
+    }
+    for(j=1;j<=cols;j++){
+        if(j==1||i==1||j==2*rows-i||i==j){
+            s=s+String.fromCharCode(Code)+" "
+            Code++
+        }else{
+            s=s+" "+" "
+            Code++
+        }
+    }
+    console.log(s)
+}
+
+
+// 1 2 3 4 5 
+//  1     4 
+//   1   3 
+//    1 2 
+//     1 
+//    2 1 
+//   3   1 
+//  4     1 
+// 5 4 3 2 1
+
+for(i=1;i<=rows;i++){
+    s=""
+    for(j=1;j<=i;j++){
+        s=s+" "+" "
+    }
+    for(j=rows-i;j>=1;j++){
+        if(j==rows-i||j==1){
+            s=s+j+" " 
+        }else{
+            s=s+" "+" "
+        }
+    }
+    console.log(s)
+    }
+    for(i=2;i<=rows;i++){
+    s=""
+    for(j=1;j<=rows-i;j++){
+        s=s+" "+" "
+    }
+    for(j=rows-i;j>=1;j++){
+        if(j==i||j==1){
+            s=s+j+" " 
+        }else{
+            s=s+" "+" "
+        }
+    }
+    console.log(s)
+    }
+
+    </script>
+</body>
+</html>
